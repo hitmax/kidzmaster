@@ -21,7 +21,7 @@ const tinypng = require('gulp-tinypng');
 
 
 const jsFiles =[
-    './src/js/slick.min.js',
+    // './src/js/slick.min.js',
     './src/js/main.js'
 ];
 
