@@ -1,1 +1,1 @@
-jQuery(function(){});
+var e;(e=jQuery)(function(){e(".hero-section-slider").slick({arrows:!1,fade:!1,dots:!0,autoplay:!0,autoplaySpeed:5e3,pauseOnFocus:!0,pauseOnHover:!0,infinite:!0})});

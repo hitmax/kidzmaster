@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis:500,700|Roboto:400,900&display=swap');
+@import 'slick-slider-styles.scss';
 
 //font-family: 'Roboto', sans-serif;
 //font-family: 'Dosis', sans-serif;
@@ -133,6 +134,22 @@ header {
   }
 }
 
-section {
-  background: $colorBlue url("/build/img/clouds.png") top no-repeat/contain;
+.section-clouds {
+  background: $colorBlue url("/build/img/clouds.png") top no-repeat/cover;
+  height: 136px;
+}
+
+.hero-section {
+  .row {
+    .hero-section-slider {
+      img {
+        width: 80%;
+        margin: auto;
+        border-radius: 10%;
+      }
+    }
+    .hero-info {
+
+    }
+  }
 }
