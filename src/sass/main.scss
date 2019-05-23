@@ -146,12 +146,12 @@ header {
 }
 
 .section-clouds {
-  background: $colorBlue url("/build/img/clouds.png") top no-repeat/cover;
+  background: $colorBlue url("../../build/img/clouds.png") top no-repeat/cover;
   height: 136px;
 }
 
 .hero-section {
-  background: #fbfcff url("/build/img/hero-bg-kids.png") bottom right no-repeat;
+  background: #fbfcff url("../../build/img/hero-bg-kids.png") bottom right no-repeat;
 
   .row {
     .hero-section-slider {
@@ -183,7 +183,7 @@ header {
 }
 
 #section-academic {
-  background: url("/build/img/butterfly-bg.jpg") no-repeat/cover;
+  background: url("../../build/img/butterfly-bg.jpg") no-repeat/cover;
   color: #fff;
 
   a {
@@ -248,7 +248,7 @@ header {
 }
 
 .section-facilities {
-  background: $colorBlue url("/build/img/schools-items-bg.jpg");
+  background: $colorBlue url("../../build/img/schools-items-bg.jpg");
 
   .head-wrapper {
     color: #fff;
@@ -340,7 +340,8 @@ header {
 }
 
 #section-reviews {
-  background: $colorBlue url("/build/img/school-bg.jpg");
+  background: $colorBlue url("../../build/img/school-bg.jpg");
+  background-size: cover;
 
   .blockquote {
     width: 70%;
@@ -349,7 +350,7 @@ header {
     color: #fff;
 
     .reviewers-photo {
-      background: url("/build/img/quotes.png") no-repeat/contain;
+      background: url("../../build/img/quotes.png") no-repeat/contain;
       width: 45%;
       padding: 4rem;
       margin: 0 auto;
@@ -364,6 +365,7 @@ header {
     .blockquote-footer {
       @include fontDosis(2rem, 700);
       color: #fff;
+      background-color: transparent;
 
       &:before {
         display: none;
