@@ -21,23 +21,27 @@ $colorLightBlue: #80d2e9;
   font-weight: $fontWeight;
 }
 
-//@mixin bigBlueButton {
-//  min-height: 3em;
-//  min-width: 12em;
-//  background-color: $colorCoral;
-//  border-radius: 3em;
-//  border: none;
-//  outline: none;
-//  color: $colorPink;
-//  text-transform: uppercase;
-//  font-family: "Comic Sans MS", sans-serif;
-//  &:hover {
-//    box-shadow: 0 2px 0.5em $textColorDarkPink;
-//  }
-//  &:active {
-//    background-color: $textColorDarkPink;
-//  }
-//}
+@mixin bigButton($color, $fontColor) {
+  display: inline-block;
+  min-height: 3em;
+  min-width: 12em;
+  background-color: $color;
+  border-radius: 2em;
+  border: none;
+  outline: none;
+  color: $fontColor;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 3em;
+  text-align: center;
+  @include fontRoboto(1em, 400);
+  &:hover {
+    box-shadow: 0 2px 0.5em lighten($color, 20);
+  }
+  &:active {
+    background-color: darken($color, 20);
+  }
+}
 
 
 body {
@@ -53,29 +57,36 @@ body {
     font-size: 10px;
   }
 
-  //  h1 {
-  //    font-size: 5em;
-  //    font-weight: 700;
-  //  }
+  h1 {
+    @include fontDosis(4.5em, 700);
+  }
+
+  h2 {
+    @include fontDosis(2.5em, 700);
+    text-transform: uppercase;
+  }
+
   //
-  //  h2 {
-  //    font-size: 3em;
-  //    font-weight: 700;
-  //  }
+  //h3 {
+  //  @include fontPacifico(2.5em)
+  //}
   //
-  //  h3 {
-  //    @include fontPacifico(2.5em)
-  //  }
-  //
-  //  h4 {
-  //    font-size: 2em;
-  //  }
+  //h4 {
+  //  font-size: 2em;
+  //}
+  .head-wrapper {
+    margin-bottom: 2em;
+
+    p {
+      @include fontDosis(1.5em, 500);
+    }
+  }
+
+  .section-padding {
+    padding: 5em 0;
+  }
 }
 
-//
-//
-//
-//
 
 header {
   padding: 1rem;
@@ -140,6 +151,8 @@ header {
 }
 
 .hero-section {
+  background: #fbfcff url("/build/img/hero-bg-kids.png") bottom right no-repeat;
+
   .row {
     .hero-section-slider {
       img {
@@ -148,8 +161,176 @@ header {
         border-radius: 10%;
       }
     }
-    .hero-info {
 
+    .hero-info-wrapper {
+      text-align: center;
+      margin: auto;
+
+      h1 {
+        color: $colorBlue;
+      }
+
+      p {
+        @include fontDosis(3em, 500);
+        color: $colorBlue;
+      }
+
+      a {
+        @include bigButton($colorBlue, #fff);
+      }
+    }
+  }
+}
+
+#section-academic {
+  background: url("/build/img/butterfly-bg.jpg") no-repeat/cover;
+  color: #fff;
+
+  a {
+    @include bigButton(#fff, $colorBlue);
+  }
+
+  .image-container {
+    margin: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#section-admission {
+  .head-wrapper {
+    h2 {
+      color: $colorBlue;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .card-subtitle {
+      @include fontRoboto(1em, 400);
+      color: #000;
+    }
+
+    .card-title {
+      @include fontDosis(1.5em, 500);
+      color: $colorBlue;
+    }
+
+    .card-text {
+      @include fontRoboto(1em, 400);
+    }
+
+    .card-link {
+      text-transform: uppercase;
+      color: $colorBlue;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .row:last-of-type {
+    margin-bottom: 3rem;
+  }
+
+  .section-link {
+    @include bigButton($colorBlue, #fff);
+    display: block;
+    max-width: 15rem;
+    margin: 0 auto;
+  }
+}
+
+.section-facilities {
+  background: $colorBlue url("/build/img/schools-items-bg.jpg");
+
+  .head-wrapper {
+    color: #fff;
+  }
+
+  .tile-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .tile {
+      //display: flex;
+      //flex-direction: column;
+      //justify-content: space-between;
+      align-items: center;
+      //width: 130px;
+      width: 30%;
+      overflow: hidden;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 2rem;
+      text-align: center;
+      text-transform: capitalize;
+      color: $colorBlue;
+      vertical-align: bottom;
+      //margin: 0 1rem 1rem 0;
+      &:before {
+        content: "";
+        padding-top: 100%;
+        float: left;
+      }
+
+      img {
+        width: 60%;
+        //margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+
+
+#section-teachers {
+  .head-wrapper {
+    h2 {
+      color: $colorBlue;
+    }
+  }
+
+  //.row:first-of-type {
+  //  margin-bottom: 30px;
+  //}
+  .card {
+    margin-bottom: 30px;
+  }
+
+  .card {
+    border-color: transparent;
+
+    .card-img-top {
+      border-radius: 2rem 2rem 0 0;
+    }
+
+    .card-body {
+      color: #fff;
+      text-transform: capitalize;
+      text-align: center;
+      background-color: $colorBlue;
+      border-radius: 0 0 2rem 2rem;
+      padding: 0.25rem;
+
+      .card-title {
+        margin-bottom: 0.25rem;
+      }
+
+      .card-text {
+        font-size: 0.8em;
+      }
     }
   }
 }
