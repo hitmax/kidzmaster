@@ -254,6 +254,10 @@ header {
     color: #fff;
   }
 
+  img:first-of-type {
+    margin-bottom: 2rem;
+  }
+
   .tile-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -330,6 +334,59 @@ header {
 
       .card-text {
         font-size: 0.8em;
+      }
+    }
+  }
+}
+
+#section-reviews {
+  background: $colorBlue url("/build/img/school-bg.jpg");
+
+  .blockquote {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    color: #fff;
+
+    .reviewers-photo {
+      background: url("/build/img/quotes.png") no-repeat/contain;
+      width: 45%;
+      padding: 4rem;
+      margin: 0 auto;
+
+      img {
+        width: 87%;
+        margin-left: 0.3rem;
+        border-radius: 50%;
+      }
+    }
+
+    .blockquote-footer {
+      @include fontDosis(2rem, 700);
+      color: #fff;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .blockquote-text {
+      font-size: 1rem;
+    }
+  }
+  .slick-dots {
+    bottom: -1em;
+    left: calc(50% - 39px);
+    li {
+      button {
+        border-color: #fff;
+        &:hover {
+          outline: #fff;
+          background-color: lighten($colorLightBlue, 20);
+        }
+      }
+      &.slick-active button {
+        background-color: #fff;
       }
     }
   }

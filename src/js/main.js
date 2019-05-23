@@ -47,24 +47,24 @@
         //         }
         //     ]
         // });
-        // $('.reviews-slider').slick({
-        //     arrows: true,
-        //     fade: true,
-        //     dots: false,
-        //     autoplay: true,
-        //     autoplaySpeed: 10000,
-        //     pauseOnFocus: true,
-        //     pauseOnHover: true,
-        //     infinite: true,
-        //     responsive: [
-        //         {
-        //             breakpoint: 575,
-        //             settings: {
-        //                 arrows: false
-        //             }
-        //         }
-        //     ]
-        // });
+        $('.review-slider').slick({
+            arrows: false,
+            fade: true,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnFocus: true,
+            pauseOnHover: true,
+            infinite: true,
+            // responsive: [
+            //     {
+            //         breakpoint: 575,
+            //         settings: {
+            //             arrows: false
+            //         }
+            //     }
+            // ]
+        });
         //
         // var $root = $('html');
         // $('a.anchor').on('click', function () {
