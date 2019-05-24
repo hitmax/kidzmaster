@@ -376,20 +376,99 @@ header {
       font-size: 1rem;
     }
   }
+
   .slick-dots {
     bottom: -1em;
     left: calc(50% - 39px);
+
     li {
       button {
         border-color: #fff;
+
         &:hover {
           outline: #fff;
           background-color: lighten($colorLightBlue, 20);
         }
       }
+
       &.slick-active button {
         background-color: #fff;
       }
+    }
+  }
+}
+
+#section-blog {
+  .head-wrapper {
+    h2 {
+      color: $colorBlue;
+    }
+  }
+  .card-deck {
+    .card {
+      border-color: transparent;
+    }
+
+    .card-img-top {
+      height: 50%;
+      width: 100%;
+      border-radius: 30px;
+    }
+  }
+}
+
+#contacts {
+  //background: url("../../build/img/clouds-and-rainbow-bg.jpg") top/contain no-repeat;
+  & > img {
+    width: 100%;
+  }
+
+  .container {
+    //background: url("../../build/img/kidz-master-color-logo.png") right center no-repeat;
+    .socials, .quicklinks {
+      text-align: center;
+    }
+
+    strong {
+      color: $colorBlue;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    .links {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $colorBlue;
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .footer-image {
+    //background: #7db928 url("../../build/img/school-bg.png") bottom/contain no-repeat;
+    text-align: center;
+    text-transform: uppercase;
+    @include fontDosis(2rem, 700);
+    color: #fff;
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      margin: 0;
+      background-color: #7db928;
+    }
+    a {
+      text-decoration: none;
     }
   }
 }
