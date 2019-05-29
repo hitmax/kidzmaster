@@ -216,11 +216,20 @@ header {
       color: $colorBlue;
     }
   }
+  [class*=col-] {
+    overflow: hidden;
+  }
 
   .card-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media screen and (max-width: 1200px) {
+      padding: 0.75em;
+      .card-text {
+        font-size: 0.7rem;
+      }
+    }
 
     .card-subtitle {
       @include fontRoboto(1em, 400);
@@ -234,6 +243,9 @@ header {
 
     .card-text {
       @include fontRoboto(1em, 400);
+      @media screen and (max-width: 1200px) and (min-width:991px) {
+          font-size: 0.7rem;
+      }
     }
 
     .card-link {
@@ -244,6 +256,12 @@ header {
 
   img {
     width: 100%;
+    @media screen and (max-width:991px) and (min-width: 420px) {
+      margin: -20% 0;
+    }
+    @media screen and (max-width: 419px){
+      height: 100%;
+    }
   }
 
   .row:last-of-type {
