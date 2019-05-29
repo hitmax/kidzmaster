@@ -83,7 +83,7 @@ body {
   }
 
   .section-padding {
-    padding: 5em 0;
+    padding: 5em 15px;
   }
 }
 
@@ -260,7 +260,8 @@ header {
       margin: -20% 0;
     }
     @media screen and (max-width: 419px){
-      height: 100%;
+      transform: scale(1.4);
+      margin-top: 20%;
     }
   }
 
