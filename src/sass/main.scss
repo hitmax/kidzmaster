@@ -155,7 +155,9 @@ header {
 
 .section-clouds {
   background: $colorBlue url("../../build/img/clouds.png") top no-repeat/cover;
-  height: 136px;
+  //height: 136px;
+  height: 8rem;
+  margin: -2px 0;
 }
 
 .hero-section {
@@ -163,6 +165,7 @@ header {
 
   .row {
     .hero-section-slider {
+      margin-bottom: 2rem;
       img {
         width: 80%;
         margin: auto;
