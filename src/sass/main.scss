@@ -369,10 +369,6 @@ header {
       .card-title {
         margin-bottom: 0.25rem;
       }
-
-      .card-text {
-        font-size: 0.8em;
-      }
     }
   }
 }
@@ -386,6 +382,9 @@ header {
     margin: 0 auto;
     padding: 1rem 0;
     color: #fff;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
 
     .reviewers-photo {
       background: url("../../build/img/quotes.png") no-repeat/contain;
@@ -393,10 +392,28 @@ header {
       padding: 4rem;
       margin: 0 auto;
 
+      @media screen and (max-width: 992px) {
+        width: 70%;
+      }
+      @media screen and (max-width: 768px) {
+        width: 80%;
+      }
+      @media screen and (max-width: 576px) {
+        width: 90%;
+        padding: 14%;
+      }
+
       img {
         width: 87%;
         margin-left: 0.3rem;
         border-radius: 50%;
+        @media screen and (max-width: 768px ) {
+          width: 80%;
+          margin-left: 1.5rem;
+        }
+        @media screen and (max-width: 576px ) {
+          margin-left: 1rem;
+        }
       }
     }
 
@@ -412,6 +429,9 @@ header {
 
     .blockquote-text {
       font-size: 1rem;
+      @media screen and (max-width: 450px) {
+        font-size: 0.8rem;
+      }
     }
   }
 

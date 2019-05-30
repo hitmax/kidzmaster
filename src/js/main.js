@@ -56,14 +56,14 @@
             pauseOnFocus: true,
             pauseOnHover: true,
             infinite: true,
-            // responsive: [
-            //     {
-            //         breakpoint: 575,
-            //         settings: {
-            //             arrows: false
-            //         }
-            //     }
-            // ]
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        dots: false
+                    }
+                }
+            ]
         });
         //
         // var $root = $('html');
