@@ -96,8 +96,9 @@ header {
     .navbar-toggler {
       border-color: $colorLightBlue;
     }
+
     .navbar-brand {
-      @media screen and (max-width: 430px){
+      @media screen and (max-width: 430px) {
         max-width: 180px;
         img {
           width: 100%;
@@ -166,6 +167,7 @@ header {
   .row {
     .hero-section-slider {
       margin-bottom: 2rem;
+
       img {
         width: 80%;
         margin: auto;
@@ -216,6 +218,7 @@ header {
       color: $colorBlue;
     }
   }
+
   [class*=col-] {
     overflow: hidden;
   }
@@ -243,8 +246,8 @@ header {
 
     .card-text {
       @include fontRoboto(1em, 400);
-      @media screen and (max-width: 1200px) and (min-width:991px) {
-          font-size: 0.7rem;
+      @media screen and (max-width: 1200px) and (min-width: 991px) {
+        font-size: 0.7rem;
       }
     }
 
@@ -256,10 +259,10 @@ header {
 
   img {
     width: 100%;
-    @media screen and (max-width:991px) and (min-width: 420px) {
+    @media screen and (max-width: 991px) and (min-width: 420px) {
       margin: -20% 0;
     }
-    @media screen and (max-width: 419px){
+    @media screen and (max-width: 419px) {
       transform: scale(1.4);
       margin-top: 20%;
     }
@@ -280,12 +283,17 @@ header {
 .section-facilities {
   background: $colorBlue url("../../build/img/schools-items-bg.jpg");
 
-  .head-wrapper {
-    color: #fff;
+  .facilities-info {
+    text-align: center;
+
+    .head-wrapper {
+      color: #fff;
+    }
   }
 
   img:first-of-type {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
   }
 
   .tile-wrapper {
@@ -434,6 +442,7 @@ header {
       color: $colorBlue;
     }
   }
+
   .card-deck {
     .card {
       border-color: transparent;
@@ -497,6 +506,7 @@ header {
       margin: 0;
       background-color: #7db928;
     }
+
     a {
       text-decoration: none;
     }
