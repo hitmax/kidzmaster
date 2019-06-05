@@ -23,20 +23,20 @@ $colorLightBlue: #80d2e9;
 
 @mixin bigButton($color, $fontColor) {
   display: inline-block;
-  min-height: 3em;
-  min-width: 12em;
+  min-height: 3rem;
+  min-width: 12rem;
   background-color: $color;
-  border-radius: 2em;
+  border-radius: 2rem;
   border: none;
   outline: none;
   color: $fontColor;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 3em;
+  line-height: 3rem;
   text-align: center;
-  @include fontRoboto(1em, 400);
+  @include fontRoboto(1rem, 400);
   &:hover {
-    box-shadow: 0 2px 0.5em lighten($color, 20);
+    box-shadow: 0 2px 0.5rem lighten($color, 20);
   }
   &:active {
     background-color: darken($color, 20);
@@ -44,7 +44,7 @@ $colorLightBlue: #80d2e9;
 }
 
 
-body {
+html {
   @include fontRoboto(16px, 400);
 
   @media screen and (max-width: 991px) {
@@ -58,11 +58,11 @@ body {
   }
 
   h1 {
-    @include fontDosis(4.5em, 700);
+    @include fontDosis(4.5rem, 700);
   }
 
   h2 {
-    @include fontDosis(2.5em, 700);
+    @include fontDosis(2.5rem, 700);
     text-transform: uppercase;
   }
 
@@ -75,15 +75,15 @@ body {
   //  font-size: 2em;
   //}
   .head-wrapper {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
 
     p {
-      @include fontDosis(1.5em, 500);
+      @include fontDosis(1.5rem, 500);
     }
   }
 
   .section-padding {
-    padding: 5em 15px;
+    padding: 5rem 15px;
   }
 }
 
@@ -184,7 +184,7 @@ header {
       }
 
       p {
-        @include fontDosis(3em, 500);
+        @include fontDosis(3rem, 500);
         color: $colorBlue;
       }
 
@@ -228,24 +228,24 @@ header {
     flex-direction: column;
     justify-content: center;
     @media screen and (max-width: 1200px) {
-      padding: 0.75em;
+      padding: 0.75rem;
       .card-text {
         font-size: 0.7rem;
       }
     }
 
     .card-subtitle {
-      @include fontRoboto(1em, 400);
+      @include fontRoboto(1rem, 400);
       color: #000;
     }
 
     .card-title {
-      @include fontDosis(1.5em, 500);
+      @include fontDosis(1.5rem, 500);
       color: $colorBlue;
     }
 
     .card-text {
-      @include fontRoboto(1em, 400);
+      @include fontRoboto(1rem, 400);
       @media screen and (max-width: 1200px) and (min-width: 991px) {
         font-size: 0.7rem;
       }
@@ -429,14 +429,11 @@ header {
 
     .blockquote-text {
       font-size: 1rem;
-      @media screen and (max-width: 450px) {
-        font-size: 0.8rem;
-      }
     }
   }
 
   .slick-dots {
-    bottom: -1em;
+    bottom: -1rem;
     left: calc(50% - 39px);
 
     li {
@@ -488,10 +485,25 @@ header {
     width: 100%;
   }
 
+
   .container {
     //background: url("../../build/img/kidz-master-color-logo.png") right center no-repeat;
+    font-size: 1.25rem;
     .socials, .quicklinks {
       text-align: center;
+    }
+
+    .brand {
+      text-align: center;
+      padding-top: 5rem;
+      img {
+        max-width: 100%;
+      }
+    }
+    .contacts {
+      @media screen and (max-width: 575px) {
+        text-align: center;
+      }
     }
 
     strong {
