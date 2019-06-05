@@ -66,14 +66,14 @@
             ]
         });
         //
-        // var $root = $('html');
-        // $('a.anchor').on('click', function () {
-        //     $root.animate({
-        //         scrollTop: $($.attr(this, 'href')).offset().top
-        //     }, 500);
-        //
-        //     return false;
-        // });
+        var $root = $('html');
+        $('a.nav-link').on('click', function () {
+            $root.animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+
+            return false;
+        });
 
     });
 })(jQuery);

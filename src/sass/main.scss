@@ -316,11 +316,13 @@ header {
       text-align: center;
       text-transform: capitalize;
       color: $colorBlue;
+
       &:before {
         content: "";
         padding-top: 100%;
         float: left;
       }
+
       img {
         height: 4.2rem;
       }
