@@ -464,15 +464,21 @@ header {
   }
 
   .card-deck {
+    @media screen and (max-width: 992px) {
+      flex-flow: column nowrap;
+    }
+    .card, .card-img-top {
+      border-radius: 2rem;
+    }
+    .card-footer {
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      text-align: center;
+    }
     .card {
-      border-color: transparent;
+      margin-bottom: 2rem;
     }
 
-    .card-img-top {
-      height: 50%;
-      width: 100%;
-      border-radius: 30px;
-    }
   }
 }
 
