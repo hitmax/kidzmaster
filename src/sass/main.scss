@@ -296,36 +296,33 @@ header {
     max-width: 100%;
   }
 
+  .tiles {
+    padding-top: 5rem;
+  }
+
   .tile-wrapper {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: center;
 
     .tile {
-      //display: flex;
-      //flex-direction: column;
-      //justify-content: space-between;
-      align-items: center;
-      //width: 130px;
-      width: 30%;
-      overflow: hidden;
+      width: 10rem;
+      max-height: 10rem;
+      box-sizing: border-box;
+      margin: 0.5rem;
       padding: 1rem;
       background-color: #fff;
-      border-radius: 2rem;
+      border-radius: 1.5rem;
       text-align: center;
       text-transform: capitalize;
       color: $colorBlue;
-      vertical-align: bottom;
-      //margin: 0 1rem 1rem 0;
       &:before {
         content: "";
         padding-top: 100%;
         float: left;
       }
-
       img {
-        width: 60%;
-        //margin-bottom: 0.5rem;
+        height: 4.2rem;
       }
 
       p {
@@ -407,11 +404,11 @@ header {
         width: 87%;
         margin-left: 0.3rem;
         border-radius: 50%;
-        @media screen and (max-width: 768px ) {
+        @media screen and (max-width: 768px) {
           width: 80%;
           margin-left: 1.5rem;
         }
-        @media screen and (max-width: 576px ) {
+        @media screen and (max-width: 576px) {
           margin-left: 1rem;
         }
       }
@@ -464,14 +461,17 @@ header {
     @media screen and (max-width: 992px) {
       flex-flow: column nowrap;
     }
+
     .card, .card-img-top {
       border-radius: 2rem;
     }
+
     .card-footer {
       border-bottom-left-radius: 2rem;
       border-bottom-right-radius: 2rem;
       text-align: center;
     }
+
     .card {
       margin-bottom: 2rem;
     }
@@ -489,6 +489,7 @@ header {
   .container {
     //background: url("../../build/img/kidz-master-color-logo.png") right center no-repeat;
     font-size: 1.25rem;
+
     .socials, .quicklinks {
       text-align: center;
     }
@@ -496,10 +497,12 @@ header {
     .brand {
       text-align: center;
       padding-top: 5rem;
+
       img {
         max-width: 100%;
       }
     }
+
     .contacts {
       @media screen and (max-width: 575px) {
         text-align: center;
@@ -517,6 +520,10 @@ header {
       text-transform: uppercase;
       text-decoration: none;
       color: $colorBlue;
+
+      &:hover {
+        color: darken($colorBlue, 20);
+      }
     }
 
     ul {
